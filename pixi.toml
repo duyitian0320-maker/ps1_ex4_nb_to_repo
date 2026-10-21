@@ -1,0 +1,19 @@
+[workspace]
+authors = ["Angel <duyitian0320@gmail.com>"]
+channels = ["conda-forge"]
+name = "titanic-ex4"
+platforms = ["win-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.11.*"
+pandas = "*"
+numpy = "*"
+matplotlib = "*"
+seaborn = "*"
+scikit-learn = "*"
+wordcloud = "*"
+jupyterlab = "*"
+ipykernel = "*"

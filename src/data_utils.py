@@ -107,3 +107,28 @@ def unique_summary(df):
     })
 
     return summary.T
+
+def combine_datasets(train_df, test_df):
+    """
+    Combine training and test datasets and label their sources.
+
+    Parameters
+    ----------
+    train_df : pandas.DataFrame
+        Training dataset.
+    test_df : pandas.DataFrame
+        Test dataset.
+
+    Returns
+    -------
+    pandas.DataFrame
+        Combined dataset with a 'set' column identifying
+        whether each observation comes from train or test.
+    """
+    train = train_df.copy()
+    test = test_df.copy()
+
+    train["set"] = "train"
+    test["set"] = "test"
+
+    return pd.concat([train, test], axis=0, ignore_index=True)
